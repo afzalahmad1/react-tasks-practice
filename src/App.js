@@ -13,6 +13,7 @@ import Counter from './components/counter/Counter';
 import Navigations from './components/Navigation';
 import CardInput from './components/CardInput';
 import Timer from './components/Timer';
+import DropDownSearch from './components/DropDownSearch';
 
 function App() {
   const list = ["afzal","adil","ahrar","dilnawaz","jitu","zeeshan","bakku","naruto","natsu","tanjiro"]
@@ -22,8 +23,9 @@ function App() {
 
       
       <Navigations />
-      <h1>Afzal Ahmad</h1>
+      {/* <h1>Afzal Ahmad</h1> */}
       <CardInput />
+      <DropDownSearch arr={list}/>
       <Routes>
         <Route path='/' element={<ImageUpload />} />
         <Route path='/filtername' element={<Search  list={list}/>} />

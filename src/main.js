@@ -171,3 +171,38 @@ console.log([...set.keys()])
 */
 
 
+// polifills of map 
+
+Array.prototype.myMap = function (callback){
+    let newArr = [];
+    for(let i=0;i<this.length;i++){
+        newArr.push(callback(this[i],i,newArr))
+    }
+    return newArr
+}
+
+let arr = [2 , 3 , 5];
+
+let ans = arr.myMap((val)=>{
+    return val*2;
+})
+console.log(ans);
+
+// polyfil for filter
+
+Array.prototype.myFilter = function(callback){
+    let newArr = [];
+    for(let i = 0 ; i< this.length;i++){
+        if(callback(this[i],i)){
+            newArr.push(this[i]);
+        }
+    }
+    return newArr
+}
+
+let arr1 = [2 , 3 , 5];
+
+let ans1 = arr.myFilter((val)=>{
+    return val>3;
+})
+console.log(ans1);

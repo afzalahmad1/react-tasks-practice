@@ -29,7 +29,7 @@ const Covid19 = ()=>{
     const FetchData = async ()=>{
         const res = await fetch(`http://disease.sh/v3/covid-19/countries/`);
         const data = await res.json();
-        //  console.log(data)
+         console.log(data)
         setCovidData(data)
         if(data){
             let arr = [];
@@ -48,7 +48,7 @@ const Covid19 = ()=>{
         <div>
             <p>Covid Updates</p>
             <b>Select Country</b>
-            <select onChange={(e)=> setCountry(e.target.value)}>
+            <select value={country} onChange={(e)=> setCountry(e.target.value)}>
                 {
                     countriesArr.map((country,idx)=>{
                         return(
