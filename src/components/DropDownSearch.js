@@ -5,7 +5,7 @@ const DropDownSearch = ({arr})=>{
 
     return(
         <div>
-            <input list="data" value={text} onChange={(e)=> setText(e.target.value)}/>
+            <input list="data" value={text} onChange={(e)=> setText(e.target.value)}/>l
             <datalist id="data">
                 {
                     text.length>=2 && 
