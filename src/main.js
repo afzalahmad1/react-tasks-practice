@@ -3,7 +3,7 @@
 //     setTimeout(() => {
 //         console.log(i)
 //     }, 1000);
-// } 
+// }
 // //10 10 10 10 10 10 10 10 10 10
 
 // for(let i=0;i<10;i++){
@@ -11,7 +11,7 @@
 //     setTimeout(() => {
 //         console.log(i)
 //     }, 1000);
-// } 
+// }
 // //0 1 2 3 4 5 6 7 8 9
 
 // function mul(x){
@@ -22,9 +22,16 @@
 // mul(5)(6)
 
 // let arr = [9,2,3,4,5,6,7];
+
+// console.log("ori", arr);
+// let sub = arr.slice(1,3)
+// console.log("after sub", arr);
+// console.log("sub", sub);
+// let sp = arr.splice(1,3)
+// console.log("after sp", arr);
+// console.log("sp", sp);
 // let obj = {...arr};
 // console.log(obj)
-
 
 // let promise = new Promise((res)=>res(2));
 
@@ -40,10 +47,6 @@
 // }).then((v)=>{
 //     console.log(v)
 // })
-
-
-
-
 
 // const arr = [3,4,5,6];
 
@@ -64,34 +67,28 @@
 // arr2.sort((a,b)=> a-b)
 // console.log(arr2)
 
-
-
 // (function(){  var x = y = 5;})();
 // console.log("x is defined? " + (typeof x !== 'undefined'));
 // console.log("y is defined? " + (typeof y !== 'undefined'));
 
 // var x = y = 5 ===>   y = 5(global)     var x = y(local)
-// so y is accessible outside function 
+// so y is accessible outside function
 //and x is not accessible from outside
 // The output of the code is x is defined? false and y is defined? true.
 
-// The reason for this is that the variable declaration var x = y = 5; is actually interpreted as two 
-// separate statements by the JavaScript engine. The first statement is y = 5;, which assigns the value 5 to 
+// The reason for this is that the variable declaration var x = y = 5; is actually interpreted as two
+// separate statements by the JavaScript engine. The first statement is y = 5;, which assigns the value 5 to
 // the global variable y. The second statement is var x = y;, which declares a new local variable x and
-//  initializes it with the current value of y. However, since y is a global variable, it can be accessed 
-//  from anywhere in the code, including inside the function. Therefore, when you check if x is defined, it 
-//  returns false because it is only defined inside the function scope. On the other hand, when you check if y 
+//  initializes it with the current value of y. However, since y is a global variable, it can be accessed
+//  from anywhere in the code, including inside the function. Therefore, when you check if x is defined, it
+//  returns false because it is only defined inside the function scope. On the other hand, when you check if y
 //  is defined, it returns true because it is a global variable and can be accessed from anywhere in the code.
-
-
-
 
 // (function(){
 //     console.log(a) // undefined
 //     console.log(b) // ReferenceError: b is not defined
 //     var a = b = 3;
 //   })();
-
 
 /*
 //CALL APPLY BIND
@@ -116,8 +113,6 @@ fnc1()
 let fnc2 = personName.bind(obj2,"male")
 fnc2()
 */
-
-
 
 /*
 //MAP in js
@@ -170,8 +165,7 @@ set.delete(0)
 console.log([...set.keys()])
 */
 
-
-// polifills of map 
+// polifills of map
 
 // Array.prototype.myMap = function (callback){
 //     let newArr = [];
@@ -207,8 +201,6 @@ console.log([...set.keys()])
 // })
 // console.log(ans1);
 
-
-
 // let obj ={
 //      name : "Afzal",
 //      message(){
@@ -225,3 +217,73 @@ console.log([...set.keys()])
 
 // setTimeout( obj.message,1000)
 // // undefined
+
+// for(let i = 0 ; i<5 ; i++);
+// console.log(i);
+
+// for(var i = 0 ; i<5 ; i++);
+// console.log(i);
+
+// let obj = {
+//     name: "Rashid",
+//     method: ()=>{
+//         console.log(name);
+//     }
+// }
+// obj.method();
+
+// function showMessage(from, text = "no text given") {
+//     console.log( from + ": " + text );
+//     }
+//     showMessage("Ann","Afzal");
+
+// function m1(s) {
+//     s = s + "tree";
+//     return s;
+// }
+
+// let s= "str"
+// console.log(m1(s)); //strtree
+// console.log(s);   // str
+
+// console.log([] == []); // false
+// console.log([] === []); // false
+
+// console.log({} == {});
+// console.log({} === {});
+
+// let arr1 = [];
+// let arr2 = arr1;
+// console.log(arr1 == arr2);
+// console.log(arr1 === arr2);
+
+// let arr = [1,2,3,4,5,6,7,8]
+
+// let m = arr.map((val)=>{
+//     if(val>3){
+//         return val
+//     }
+// })
+// let f = arr.filter((val)=>{
+//     if(val>3){
+//         return val
+//     }
+// })
+// console.log(f);
+
+// swap key with value
+
+function swap() {
+  let output = {};
+  for (let val in json) {
+    console.log(val, "+", json[val]);
+    output[json[val]] = val;
+  }
+  return output;
+}
+let json = {
+  Prop_1: "Val_1",
+  Prop_2: "Val_2",
+  Prop_3: "Val_3",
+};
+console.log(swap(json));

@@ -13,6 +13,9 @@ const Navigations = ()=>{
             <NavLink to="/checkbox">Checkbox</NavLink>
             <NavLink to="/counter">Counter</NavLink>
             <NavLink to="/timer">Timer</NavLink>
+            <NavLink to="/timer3">Timer3</NavLink>
+            <NavLink to="/drop">Dropsearch</NavLink>
+            <NavLink to="/card">Card</NavLink>
         </div>
     )
 }

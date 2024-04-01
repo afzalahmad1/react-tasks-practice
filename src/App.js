@@ -14,6 +14,10 @@ import Navigations from './components/Navigation';
 import CardInput from './components/CardInput';
 import Timer from './components/Timer';
 import DropDownSearch from './components/DropDownSearch';
+import Mock from './components/Mock';
+import Thankyou from './components/ThankYou';
+import Timer3 from './components/Timer3'
+import Rmock3 from './components/Rmock3';
 
 function App() {
   const list = ["afzal","adil","ahrar","dilnawaz","jitu","zeeshan","bakku","naruto","natsu","tanjiro"]
@@ -24,8 +28,9 @@ function App() {
       
       <Navigations />
       {/* <h1>Afzal Ahmad</h1> */}
-      <CardInput />
-      <DropDownSearch arr={list}/>
+      
+      <Rmock3 />
+      {/* <Timer3 /> */}
       <Routes>
         <Route path='/' element={<ImageUpload />} />
         <Route path='/filtername' element={<Search  list={list}/>} />
@@ -37,6 +42,11 @@ function App() {
         <Route path='/checkbox' element={ <CheckBox />} />
         <Route path='/counter' element={ <Counter />} />
         <Route path='/timer' element={ <Timer />} />
+        <Route path='/card' element={ <CardInput />} />
+        <Route path='/drop' element={ <DropDownSearch />} />
+        <Route path='/timer3' element={ <Timer3 />} />
+        {/* <Route path='/thankyou' element={<Thankyou />} />
+        <Route path='/' element={<Mock />} /> */}
       </Routes>
 
     </div>

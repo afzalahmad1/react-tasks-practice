@@ -79,3 +79,11 @@ p{
   border-radius: 5px;
   border: 1px solid skyblue;
 }
+
+.flex{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 100px;
+}
