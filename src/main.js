@@ -273,17 +273,17 @@ console.log([...set.keys()])
 
 // swap key with value
 
-function swap() {
-  let output = {};
-  for (let val in json) {
-    console.log(val, "+", json[val]);
-    output[json[val]] = val;
-  }
-  return output;
-}
-let json = {
-  Prop_1: "Val_1",
-  Prop_2: "Val_2",
-  Prop_3: "Val_3",
-};
-console.log(swap(json));
+// function swap() {
+//   let output = {};
+//   for (let val in json) {
+//     console.log(val, "+", json[val]);
+//     output[json[val]] = val;
+//   }
+//   return output;
+// }
+// let json = {
+//   Prop_1: "Val_1",
+//   Prop_2: "Val_2",
+//   Prop_3: "Val_3",
+// };
+// console.log(swap(json));

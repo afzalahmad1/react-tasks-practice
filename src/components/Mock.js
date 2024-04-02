@@ -1,60 +1,82 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import '../App.css'
+// import "./styles.css";
+// import Pop from "./Pop";
 const Mock = () => {
-  const [countries, setCountries] = useState([]);
-  const [value, setValue] = useState("");
   const [name, setName] = useState("");
   const [age, setAge] = useState();
-  const navigate = useNavigate();
-  useEffect(() => {
-    fetchNames();
-  },[]);
+  const [value, setValue] = useState("");
+  const [countries, setCountries] = useState([]);
+  const [modal, setModal] = useState(false);
 
-  const fetchNames = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = () => {
     fetch(`https://restcountries.com/v3.1/all`)
       .then((res) => res.json())
       .then((data) => setCountries(data));
   };
 
-  const validate = ()=>{
-    // console.log(value);
-    if(!name || !age){
-        alert("all fields are neccessory")
-        return;
+  const handleSubmit = () => {
+    if (!name || !age || !value) {
+      if (!name) {
+        alert("Enter name");
+      } else if (!age) {
+        alert("enter Age");
+      } else if (!value) {
+        alert("select country");
+      }
+      return;
     }
-    if(value !==""){
-        navigate("/thankyou")
-        return
-    }else{
-        alert("select country")
-        return
-    }
-
-  }
+    navigate("/thankyou")
+    // setModal(true);
+  };
   return (
-    <div className="card-flex">
-      <div className="flex">
+    <div className="form-flex">
+      {modal ? (
+        // <Pop />
+        <div>Pop</div>
+      ) : (
         <div>
-          <label>Name:</label>
-          <input type="text" placeholder="Enter Name" value={name} onChange={(e)=>setName(e.target.value)}/>
+          <div>
+            <label>Name: </label>
+            <input
+              type="text"
+              placeholder="Enter name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+          <div>
+            <label>Age: </label>
+            <input
+              type="number"
+              placeholder="Enter Age"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+            />
+          </div>
+          <select onChange={(e) => setValue(e.target.value)}>
+            <option value="">Select country</option>
+            {countries.map((item, idx) => {
+              return (
+                <option key={idx} value={item.name.common}>
+                  {item.name.common}
+                </option>
+              );
+            })}
+          </select>
+          <div>
+            <button onClick={handleSubmit}>Submit</button>
+          </div>
         </div>
-        <div>
-          <label>Age:</label>
-          <input type="number" placeholder="Enter Age" value={age} onChange={(e)=>setAge(e.target.value)}/>
-        </div>
-        {/* <label>Select Country:</label> */}
-        <select onChange={(e)=>setValue(e.target.value)}>
-          {countries && countries.map((item, idx) => {
-            return idx===0? <option>select countries</option>:<option key={idx} value={item.name.common} >{item.name.common}</option>;
-          })}
-        </select>
-
-        <div>
-          <button onClick={validate}>Submit</button>
-        </div>
-      </div>
+      )}
     </div>
   );
 };
+
 export default Mock;

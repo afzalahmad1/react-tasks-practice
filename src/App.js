@@ -18,6 +18,7 @@ import Mock from './components/Mock';
 import Thankyou from './components/ThankYou';
 import Timer3 from './components/Timer3'
 import Rmock3 from './components/Rmock3';
+import Rmock4 from './components/Rmock4';
 
 function App() {
   const list = ["afzal","adil","ahrar","dilnawaz","jitu","zeeshan","bakku","naruto","natsu","tanjiro"]
@@ -30,6 +31,7 @@ function App() {
       {/* <h1>Afzal Ahmad</h1> */}
       
       <Rmock3 />
+      <Rmock4 />
       {/* <Timer3 /> */}
       <Routes>
         <Route path='/' element={<ImageUpload />} />
@@ -45,8 +47,8 @@ function App() {
         <Route path='/card' element={ <CardInput />} />
         <Route path='/drop' element={ <DropDownSearch />} />
         <Route path='/timer3' element={ <Timer3 />} />
-        {/* <Route path='/thankyou' element={<Thankyou />} />
-        <Route path='/' element={<Mock />} /> */}
+        <Route path='/thankyou' element={<Thankyou />} />
+        <Route path='/mock1' element={<Mock />} />
       </Routes>
 
     </div>

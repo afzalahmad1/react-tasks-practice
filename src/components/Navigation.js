@@ -16,6 +16,7 @@ const Navigations = ()=>{
             <NavLink to="/timer3">Timer3</NavLink>
             <NavLink to="/drop">Dropsearch</NavLink>
             <NavLink to="/card">Card</NavLink>
+            <NavLink to="/mock1">Mock1</NavLink>
         </div>
     )
 }
