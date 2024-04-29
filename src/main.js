@@ -287,3 +287,118 @@ console.log([...set.keys()])
 //   Prop_3: "Val_3",
 // };
 // console.log(swap(json));
+
+
+// Write a program to compare two objects to determine the first object contains equivalent property values to the second object in JavaScript. 
+
+
+//       Input: obj1: { name: "John", age: 23; degree: "CS" }</br>
+//       &emsp;&emsp;&ensp; obj2: {age: 23, degree: "CS"}</br>
+//       Output: true (View this output in console)
+//     </br>
+//   </br>
+// </br>
+//       Input: obj1: { name: "John", degree: "CS" }</br>
+//       &emsp;&emsp;&ensp;obj2: {name: "Max", age: 23, degree: "CS"}</br>
+      
+//       Output: false (View this output in console)
+
+//     </p>
+//   brand: "Tesla",
+//   model: "X",
+//   category: "dual-motor",
+//   price: "$98490"
+// }
+
+
+// function check(obj1, obj2) {
+// //Write your code here
+// // console.log("obj1====", obj1)
+// // console.log("obj2====", obj2)
+// let keys1 = Object.keys(obj1);
+// let keys2 = Object.Keys(obj2);
+// console.log(keys1)
+
+// //running for loop in
+// for(let key in obj2){
+//   // comparing values
+//   if(obj1[key] !== obj2[key] ){
+//     return false
+//   }
+
+// }
+// return true;
+
+// }
+
+// // Call the function
+// console.log(check(obj1, {brand: "Tesla"})); // True
+// // console.log(check(obj1, {model: "X"})); // True
+// // console.log(check(obj1, {brand: "Mercedes"})); // False
+// // console.log(check(obj1, {cost: "$98490"})); // False
+// // console.log(check(obj1, {category: "dual-motor", price: "$98490"})); // True
+// // console.log(check(obj1, {category: "dual-motor", cost: "$98490"})); // False
+
+
+// Write a Javascript program that takes 2 arrays as inputs and prints a 3rd array with only distinct values occuring in both arrays in ascending order. 
+ 
+// Sample array: const arr1 = [1, 2, 3, 4, 5] const arr2 = [1, 2, 3, 4] Expected Output: [1, 2, 3, 4, 5] 
+
+// const arr1 = [1, 2, 3, 4, 5]
+// const arr2 = [1, 2, 3, 4]
+
+// function distinctValue(arr1,arr2){
+//     let arr = arr1.concat(arr2);
+//     let ans = []
+//     for(let val of arr){
+//         if(!ans.includes(val)){
+//             ans.push(val)
+//         }
+//     }
+//     return ans
+// }
+
+// console.log(distinctValue(arr1,arr2));
+
+
+// alert("Hello");
+// [1, 2].forEach(alert);
+
+// alert("Hello")
+// [1, 2].forEach(alert);
+
+// let admin ;
+// let name = "john";
+// admin = name;
+// alert(admin)
+
+// alert(NaN ** 0)
+// 1
+// console.log(typeof null);
+// alert(typeof null)
+
+// let name = "Ilya";
+// alert( `hello ${1}` );
+// alert( `hello ${"name"}` );
+// alert( `hello ${name}` );
+
+// result = prompt("jhgfdfghj",100);
+
+// if ("0") {
+//   alert(null || 2 || undefined);
+// }
+
+// alert(1 && null && 2);
+
+// alert(alert(1) && alert(2));
+
+// if (-1 || 0) alert("first");
+// if (-1 && 0) alert("second");
+// if (null || (-1 && 1)) alert("third");
+// let height = 0;
+// alert(height || 100); // 100
+// alert(height ?? 100); // 0
+
+// for (let i = 0; i < 5; ++i) console.log(i);
+
+for (let i = 0; i < 5; i++) console.log(i);

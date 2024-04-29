@@ -17,6 +17,7 @@ const CheckBox = () => {
   return (
     <>
     <p>checked and delete</p>
+    
       <ul>
         {game.map((val, idx) => {
           return (

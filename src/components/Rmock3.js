@@ -5,17 +5,17 @@ const Rmock3 = () => {
     let arr = ["Apple","Banana","Cherry","Orange","Elderberry"]
     let [orgArr,setOrgArr] = useState(arr);
     let [search,setSearch] = useState("");
-    let [filteredArr,setFilteredArr] = useState([]);
+
     useEffect(()=>{
         console.log("org",orgArr);
         if(search){
             let newArr = orgArr.filter((val)=>{
                 return val.toLowerCase().includes(search.toLowerCase())
             })
-            console.log(newArr);
-            setFilteredArr(newArr)
+            // console.log(newArr);
+            setOrgArr(newArr)
         }else{
-            setFilteredArr([])
+            setOrgArr(arr)
         }
         
     },[search])
@@ -25,19 +25,13 @@ const Rmock3 = () => {
     
   return (
     <div>
+    <h1>Demo Search</h1>
       <div>
         <input type='text' onChange={handleSearchInput}/>
       </div>
       <div>
         
         {
-            
-            filteredArr.length>0 ? filteredArr.map((val,idx)=>{
-                return(
-                    <li key={idx}>{val}</li>
-                )
-            })
-            :
             orgArr.map((val,idx)=>{
                 return(
                     <li key={idx}>{val}</li>
