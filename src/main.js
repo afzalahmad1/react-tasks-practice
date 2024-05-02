@@ -175,12 +175,12 @@ console.log([...set.keys()])
 //     return newArr
 // }
 
-// let arr = [2 , 3 , 5];
+let arr = [2 , 3 , 5];
 
-// let ans = arr.myMap((val)=>{
-//     return val*2;
-// })
-// console.log(ans);
+let ans = arr.myMap( (val)=>{
+    return val*2;
+})
+console.log(ans);
 
 // polyfil for filter
 
@@ -264,6 +264,7 @@ console.log([...set.keys()])
 //         return val
 //     }
 // })
+// console.log(m);
 // let f = arr.filter((val)=>{
 //     if(val>3){
 //         return val
@@ -401,4 +402,4 @@ console.log([...set.keys()])
 
 // for (let i = 0; i < 5; ++i) console.log(i);
 
-for (let i = 0; i < 5; i++) console.log(i);
+// for (let i = 0; i < 5; i++) console.log(i);
