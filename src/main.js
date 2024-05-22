@@ -175,12 +175,12 @@ console.log([...set.keys()])
 //     return newArr
 // }
 
-let arr = [2 , 3 , 5];
+// let arr = [2 , 3 , 5];
 
-let ans = arr.myMap( (val)=>{
-    return val*2;
-})
-console.log(ans);
+// let ans = arr.myMap((val)=>{
+//     return val*2;
+// })
+// console.log(ans);
 
 // polyfil for filter
 
@@ -403,3 +403,76 @@ console.log(ans);
 // for (let i = 0; i < 5; ++i) console.log(i);
 
 // for (let i = 0; i < 5; i++) console.log(i);
+
+// var x = 10;
+
+// function foo(){
+//     console.log(x);
+    
+//     var  x = 20;
+//     console.log(x);
+// }
+// foo()
+
+
+// console.log('5' + 3);
+// console.log('5' - 3);
+// console.log('5' * 3);
+// console.log('5' / 3);
+// console.log('x' / 3);
+
+// console.log('5' == 5);
+// console.log('5' === 5);
+// console.log(typeof NaN);
+// console.log(typeof null);
+// console.log(typeof {});
+// console.log(typeof function(){});
+// console.log(typeof []);
+// console.log(NaN === NaN); 
+// console.log(NaN == NaN);
+
+// console.log(1<2<3);
+// console.log(3>2>1);
+
+
+
+
+// INPUT
+const obj = [{
+    key: 'Sample1',
+    data: 'Data1'
+},
+{
+    key: 'Sample2',
+    data: 'Data2'
+},
+{
+    key: 'Sample1',
+    data: 'Data1'
+},
+{
+    key: 'Sample3',
+    data: 'Data3'
+},
+{
+    key: 'Sample2',
+    data: 'Data2'
+},
+{
+    key: 'Sample1',
+    data: 'Data1'
+}
+]
+let output = {}
+obj.forEach((item)=>{
+    if(output[item.key]){
+        // console.log(item);
+        output[item.key].push(item)
+    }else{
+        output[item.key]  = [item]
+    }
+})
+console.log(output);
+
+
+
